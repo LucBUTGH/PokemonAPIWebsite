@@ -1,0 +1,126 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set the page background and font styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Center the header and give it a background color */
+h1 {
+  text-align: center;
+  padding: 20px;
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Style the container to center the content */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Style the details */
+.container p {
+  margin: 10px 0;
+}
+
+.container p:first-child {
+  font-weight: bold;
+}
+
+/* Style the types list */
+.container ul {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.container li {
+  margin: 5px 0;
+}
+
+/* Style the navigation buttons */
+.container form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.container input[type="submit"] {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button{
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 5px 0px 0px 0px;
+  justify-content: center;
+}
+
+.container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .container input[type="submit"] {
+    padding: 6px 12px;
+  }
+}
+
+.types{
+  display: flex;
+  align-items: center;
+}
+
+.typepic{
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+}
+
+#pokemonNameInput {
+  opacity: 0; /* Start with opacity 0 to hide the div */
+  height: 0; /* Start with height 0 to hide the div */
+  overflow: hidden; /* Hide any content that overflows the div */
+  margin-top: 10px;
+  transition: opacity 0.5s ease, height 0.5s ease; /* Add transition for opacity and height */
+}
+
+/* Show the div when it has the "show" class */
+#pokemonNameInput.show {
+  opacity: 1;
+  height: auto; /* Set height to auto to show the content */
+  margin-top: 10px; /* You can customize the margin if needed */
+}

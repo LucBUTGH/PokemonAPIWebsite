@@ -80,7 +80,7 @@ $pokemon_data = get_pokemon_data($pokemon_id); //Appelle la fonction pour récup
 <head>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>Site Pokémon</title>
+    <title>Pokémon Website API</title>
 </head>
 
 <body>
@@ -92,19 +92,19 @@ $pokemon_data = get_pokemon_data($pokemon_id); //Appelle la fonction pour récup
         <p>N°
             <?php echo $pokemon_id; ?>
         </p>
-        <p>French name :
+        <p>French name:
             <?php echo ucfirst($pokemon_data['name']['fr']); ?>
         </p>
-        <p>English name :
+        <p>English name:
             <?php echo ucfirst($pokemon_data['name']['en']); ?>
         </p>
-        <p>Japanese name :
+        <p>Japanese name:
             <?php echo ucfirst($pokemon_data['name']['jp']); ?>
         </p>
-        <p>Taille:
+        <p>Height:
             <?php echo $pokemon_data['height']; ?>
         </p>
-        <p>Poids:
+        <p>Weight:
             <?php echo $pokemon_data['weight']; ?>
         </p>
         <p>Types:</p>
@@ -117,20 +117,20 @@ $pokemon_data = get_pokemon_data($pokemon_id); //Appelle la fonction pour récup
                 </li>
             <?php endforeach; ?>
         </ul>
-        <p> Forme : </p> <img id="pokepic" alt="form" src="<?php echo $pokemon_data['sprites']['regular']; ?>">
+        <p> Form: </p> <img id="pokepic" alt="form" src="<?php echo $pokemon_data['sprites']['regular']; ?>">
     <?php else: ?>
-        <p>Aucune donnée de Pokémon trouvée.</p>
+        <p>No Pokémon data found!.</p>
     <?php endif; ?>
 
 
     <!-- Utilisation du formulaire pour soumettre le bouton -->
     <form method="post" action="">
         <input type="hidden" name="pokemon_id" id="pokemon_id" value="<?php echo $pokemon_id; ?>">
-        <input type="submit" name="prev_poke" value="Pokémon précédent">
-        <input type="submit" name="next_poke" value="Pokémon suivant">
+        <input type="submit" name="prev_poke" value="Previous Pokémon">
+        <input type="submit" name="next_poke" value="Next Pokémon">
     </form>
 
-    <button name="target_poke" id="target_poke"> Pokémon recherché </button>
+    <button name="target_poke" id="target_poke"> Pokémon wanted </button>
     <div id="pokemonNameInput">
         <form method="post" action="">
             <label for="pokemonName">Enter Pokémon Name:</label>
